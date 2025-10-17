@@ -46,8 +46,10 @@ function HomeHeader() {
       // reverseGeocode(latitude, longitude);se
       console.log(`${latitude},${longitude}`);
 
+      const API_KEY = import.meta.env.VITE_REVERSE_GEOCODING_API;
+
       fetch(
-        `https://api.geoapify.com/v1/geocode/reverse?lat=25.23987347727956&lon=119.09397376522183&format=json&apiKey=${import.meta.env.VITE_REVERSE_GEOCODING_API}`,
+        `https://api.geoapify.com/v1/geocode/reverse?lat=25.23987347727956&lon=119.09397376522183&format=json&apiKey=${API_KEY}`,
       )
         .then((response) => response.json())
         .then((result) => {
