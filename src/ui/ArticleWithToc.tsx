@@ -111,7 +111,9 @@ function ArticleWithToc() {
                     key={item.id}
                     id={item.id}
                     // 将 DOM 元素与 ref 关联
-                    ref={(el) => (sectionRefs.current[item.id!] = el)}
+                    ref={(el) => {
+                      sectionRefs.current[item.id!] = el;
+                    }}
                     className="text-2xl" // 确保跳转时标题不会被顶部导航栏遮挡
                   >
                     {item.text}

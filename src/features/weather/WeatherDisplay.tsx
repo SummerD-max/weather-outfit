@@ -35,7 +35,7 @@ function WeatherDisplay() {
     wind_mph,
     humidity,
     last_updated,
-    condition: { icon, text },
+    condition: { text },
   } = weatherInfo!;
 
   const displayTemp = isCelsius ? temp_c : temp_f;

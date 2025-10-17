@@ -1,5 +1,3 @@
-export type User = {
-  userId: string | undefined;
-  name: string;
-  email: string;
-};
+import type { UserAppMetadata } from "@supabase/supabase-js";
+
+export type User = UserAppMetadata;
