@@ -17,11 +17,11 @@ export const recommendOutfit = (
 ): Outfit | null => {
   // 1. 根据温度确定保暖度范围
   let requiredWarmth = 5; // 默认保暖度
-  if (weather.temperature < 10) {
+  if (weather.temperature && weather.temperature < 10) {
     requiredWarmth = 9; // 很冷
-  } else if (weather.temperature < 18) {
+  } else if (weather.temperature && weather.temperature < 18) {
     requiredWarmth = 7; // 微冷
-  } else if (weather.temperature < 25) {
+  } else if (weather.temperature && weather.temperature < 25) {
     requiredWarmth = 4; // 温暖
   } else {
     requiredWarmth = 2; // 炎热

@@ -12,7 +12,7 @@ function Recommendation() {
   const { weather, isLoading: isLoadingWeather } = useWeather(); // useWeather 现在返回完整的 WeatherData
 
   const isLoading = isLoadingSettings || isLoadingWardrobe || isLoadingWeather;
-  const weatherInfo = weather!.current;
+  const weatherInfo = weather?.current;
 
   // 适配新的 WeatherData 结构以兼容旧的 recommendOutfit 函数
   // 我们从完整的 weather 对象中提取所需的信息
