@@ -30,7 +30,7 @@ function WardrobeDetail() {
   }, []);
 
   const handleFocusInput = () => {
-    addFormRef.current?.querySelector("input")?.focus();
+    addFormRef?.current?.querySelector("input")?.focus();
   };
 
   return (

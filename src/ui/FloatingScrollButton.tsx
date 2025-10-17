@@ -36,7 +36,7 @@ function FloatingScrollButton({
   );
 
   const handleScrollToTarget = () => {
-    if (!targetRef.current) return;
+    if (!targetRef?.current) return;
     targetRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
     onAfterScroll?.();
   };
