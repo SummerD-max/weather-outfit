@@ -15,6 +15,7 @@ async function fetchWeather(q: string): Promise<WeatherData> {
   }
 
   try {
+    console.log(API_KEY);
     const response = await fetch(
       `${BASE_URL}/current.json?key=${API_KEY}&q=${q}`,
     );
