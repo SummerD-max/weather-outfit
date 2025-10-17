@@ -11,8 +11,8 @@ function WardrobeDetail() {
   useEffect(function () {
     const intersectionObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.target === addFormRef.current) {
-          const button = buttonRef.current;
+        if (entry.target === addFormRef?.current) {
+          const button = buttonRef?.current;
           if (button) {
             button.style.opacity = entry.isIntersecting ? "0" : "100";
           }
@@ -20,8 +20,8 @@ function WardrobeDetail() {
       });
     });
 
-    if (addFormRef.current) {
-      intersectionObserver.observe(addFormRef.current);
+    if (addFormRef?.current) {
+      intersectionObserver.observe(addFormRef?.current);
     }
 
     return () => {

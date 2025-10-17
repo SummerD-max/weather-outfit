@@ -11,7 +11,7 @@ function Header() {
   const [isTop, setIsTop] = useState(false);
 
   useEffect(() => {
-    const sentinel = sentinelRef.current;
+    const sentinel = sentinelRef?.current;
     if (!sentinel) return;
 
     const observer = new IntersectionObserver(

@@ -15,8 +15,8 @@ function FloatingScrollButton({
 
   useEffect(
     function () {
-      const targetElement = targetRef.current;
-      const buttonElement = buttonRef.current;
+      const targetElement = targetRef?.current;
+      const buttonElement = buttonRef?.current;
 
       if (!targetElement || !buttonElement) return;
 
@@ -37,7 +37,7 @@ function FloatingScrollButton({
 
   const handleScrollToTarget = () => {
     if (!targetRef?.current) return;
-    targetRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    targetRef?.current.scrollIntoView({ behavior: "smooth", block: "start" });
     onAfterScroll?.();
   };
 
